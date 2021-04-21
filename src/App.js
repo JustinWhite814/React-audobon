@@ -1,15 +1,18 @@
 import React from 'react';
 import Birds from './components/Birds'
+import {Route} from 'react-router-dom'
 function App() {
   return (
     <>
       <header>
         <h1>
           <a href="/">Audubon Society</a>
-          <Birds />
+          
         </h1>
       </header>
-      <main></main>
+      <main>
+      <Route exact path='/' component={Birds}/>
+      </main>
     </>
   );
 }

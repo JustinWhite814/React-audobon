@@ -1,18 +1,40 @@
 import React from 'react';
-import {useState, useEffect} from 'react'
+import { useState, useEffect } from 'react'
 
 function Birds(props) {
-    const [birds, setBirds] = useState()
-    useEffect(()=> {
-        fetch(`https://audubon-api.herokuapp.com/api/birds`)
+    const [birds, setBirds] = useState([])
+    const fetchBird = () => {
+        fetch('https://audubon-api.herokuapp.com/api/birds')
         .then(res => res.json())
-        .then(data =>setBirds(data) )
-        .catch(console.error)
-    },[])
+        .then(res => {
+       
+        setBirds(res) 
+      
+     })
+     
+    }
+    useEffect(()=> {fetchBird()},[])
     return (
-        <div>
-            <h1>Hello</h1>
-        </div>
+        
+        <section className="container">
+            {birds.map((bird) => {
+                return (
+                    <div className="card" key={bird.name}>
+                    <div className="card-image">
+                    <img
+                    src={bird.image}
+                    alt=''
+                    />
+                    </div>
+                    <div className="card-title">
+                    <h3>{bird.name}</h3>
+                </div>
+            </div>
+                )
+            })}
+            
+        </section>
+        
     );
 }
 
