@@ -72,7 +72,7 @@ Next, we'll need to add useEffect to the component's function. Make sure to add 
 useEffect(() => {}, []);
 ```
 
-Now, you can add your fetch request inside the curly braces of the callback function. The url for our birds API is: https://audubon-api.herokuapp.com/api/birds. Use the pattern in the [AJAX & APIs](https://git.generalassemb.ly/SEIR-1130/APIs-Ajax#the-api-response) lecture for your fetch call:
+Now, you can add your fetch request inside the curly braces of the callback function. The url for our birds API is: https://audubon-api.herokuapp.com/api/birds. Use the pattern in the [AJAX & APIs](https://git.generalassemb.ly/SEIR-32221/APIs-Ajax?organization=SEIR-32221&organization=SEIR-32221#the-api-response) lecture for your fetch call:
 
 ```js
 fetch(url) //<-- the url as a string
