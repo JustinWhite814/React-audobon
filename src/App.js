@@ -17,9 +17,9 @@ function App() {
       <main>
       <Route exact path='/' component={Birds}/>
       <Route exact path='/details/:id' render={routerProps => 
-      <BirdDetails setBird={setBird} 
-                   match={routerProps.match} 
-                   bird={bird}/>} />
+                                       <BirdDetails setBird={setBird} 
+                                            match={routerProps.match} 
+                                                        bird={bird}/>} />
       
       </main>
     </>
